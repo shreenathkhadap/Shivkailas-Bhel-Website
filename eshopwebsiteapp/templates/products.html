@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+    <title>Services</title>
+  </head>
+  <style>
+  *{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+}
+.mi{
+  
+  background-position: center;
+  display: block;
+  background-size: cover;
+  height: 86.4vh;
+}
+.m2{
+  
+  background-position: center;
+  display: block;
+  background-size: cover;
+  height: 40.4vh;
+}
+@media only screen and (max-width: 600px) {
+  .m22 {
+    font-size: 14px;  
+  }
+}
+
+  .navbar {
+
+    background-color: rgb(255, 255, 241) !important;
+   
+    margin-right: auto;
+  }
+  footer {
+    
+    width: 100%;
+    position: bottom;
+    bottom: 0px;
+    
+    background: linear-gradient(45deg, rgb(70, 70, 70), rgb(116, 116, 116));
+    color: #fff;
+    padding: 30px 0 30px;
+    
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex-basis: 25%;
+    padding: 10px;
+  }
+
+  .col:nth-child(2),
+  .col:nth-child(3) {
+    flex-basis: 25%;
+    padding: 10px;
+  }
+  .col h3 {
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .email-id {
+    width: fit-content;
+    /* border-bottom: 1px solid #ccc; */
+    font-size: 15px;
+    margin: 20px 0;
+
+  }
+
+  ul li {
+    list-style: none;
+    margin-bottom: 12px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+  }
+  ul li a:hover {
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(175, 175, 175);
+  }
+  .social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+
+
+
+.button{
+    font-size:   28px;
+  color:#110f0f;
+  background-color: #fd675c;
+  padding: 20px;
+  width: 200px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.button:hover{
+    color:#110f0f;
+  background-color: #fc7970;
+  transition: 0.5s;
+}
+
+
+
+  .navbar .nav-link {
+    font-size: 22px;
+    font-weight: 350;
+    padding-right: 20px;
+  }
+
+  .navbar .navbar-brand {
+    /* font-size: 20px !important; */
+    font-size: larger;
+   
+  }
+
+  .navbar .nav-item {
+    padding-right: 35px;
+  }
+  .nav-links ul li a{
+    color: rgb(14, 13, 13);
+    
+
+  }
+  
+.nav-links ul li :hover{
+  
+  text-align: center;
+  background:#fd675c;
+  border-radius: 15px;
+  display: block;
+transition: 0.5s;
+}
+
+.servicebutt:hover{
+    color: #000000;
+    transition: 0.5s;
+    background-color: #472321;
+}
+
+
+
+</style>
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light px-2 py-3 my-0" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+  <div class="container-fluid">
+    <img src={% static 'Shiv kailas bhel (2).jpg' %} width="120px" height="120px" style="margin-left: 3%; border-radius: 30px;"  alt="">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-links" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/services">Services</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active " href="/contact">Contact Us </a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+<div class=" m2 text-center "  style="background-image: linear-gradient(50deg,  rgba(10, 13, 24, 0.795), rgba(4, 9, 30, 0.404)), url({% static 'services_op.jpg' %});">
+   
+    <p style="color: white; padding-top: 8vh; padding-left: 3vw; font-size: 10vh;" > What do we Offer...  </p>
+    <p style="color: white; padding-top: 0vh; padding-left: 3vw; font-size: 3vh;" > Menu    </p>
+  </div>
+
+ 
+  
+    <!-- <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+    <div class="bg5" style="background-color: #FFFFFF;">
+
+        <div class="team">
+          <div class="text-center row mb-2 pt-5">
+            <!-- <h2 class="display-4 font-weight-light" > <u> Technical Team </u> </h2> -->
+            <h2 class="team-text display-5 text-center font-weight-light" style="font-weight: 700;"> <b>Chat dishes  </b> </h2>
+          </div>
+        </div>
+        
+        
+        <div  class="row justify-content-center text-center py-3">
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'panipuri.jpg' %} alt="" width="200" height="100"
+                class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                <h5 class="mb-0"><b>Pani-Puri</b></h5><span class="small text-uppercase text-muted"><b</b></span><br>
+
+                <div class="pt-1" style="cursor: pointer;">
+  
+                
+              </div>
+                
+            </div>
+          </div>
+          <!-- End-->
+           <!-- Team item-->
+           <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'shev_puri.jpg' %}   alt="" height="100"
+width="180"                class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                <h5 class="mb-0"><b>Shev Puri</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                <div class="pt-2" style="cursor: pointer;">
+    
+                  
+                </div>
+                  
+              </div>
+            </div>
+            <!-- End-->
+          
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'masala-puri-pro.jpg' %} alt="" width="170" height="200"
+                              class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                              <h5 class="mb-0"><b>Masala Puri</b></h5><span class="small text-uppercase text-muted"><b>
+                                  
+                             </b></span><br>
+  
+                              <div class="pt-2" style="cursor: pointer;">
+  
+                               
+                              </div>
+                      </div>
+                    </div>
+                    <!-- End-->
+                    
+  
+                    <!-- Team item-->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                      <div class="bg-white rounded shadow-lg py-5 px-4"><img src= {% static 'ragdapro.jpg' %} alt="" width="185"
+                        class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                        <h5 class="mb-0"><b>Ragda Puri</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+  
+                          <div class="pt-2" >
+  
+                          
+                          </div>
+                          
+                        </div>
+                  </div>
+                  <!-- End-->
+                  <!-- Team item-->
+              
+                
+                
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'spdppro.jpg' %} alt="" width="260" height="100"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>S.P.D.P</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'papdichatpro.jpg' %} alt="" width="135" height="1000"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Papdi Chat</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'panipuri.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Jain Pani-Puri</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'ragdapuripro.JPG' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Ragda Patis</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'tikkipro.jpg' %} alt="" width="135"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Aloo Tikki Chat</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'samosapro.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Samosa Chat</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'dahipro.jpg' %} alt="" width="185" height="200"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Dahi Puri</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'katoripro.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Katori Chat</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+              
+                
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'bhel_op.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Oli Bhel</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'sukhipro.jpg' %} alt="" width="259"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Sukhi Bhel</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'bhel.png' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Special Bhel</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'Bhel-Pooripro.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Bhel-Puri</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'jainpro.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Jain Bhel</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'farsanbhelpro.jpg' %} alt="" width="195"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Farsan Bhel</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="team">
+                    <div class="text-center row mb-2 pt-5">
+                      <!-- <h2 class="display-4 font-weight-light" > <u> Technical Team </u> </h2> -->
+                      <h2 class="team-text display-5 text-center font-weight-light" style="font-weight: 700;"> <b>Ice-Cream </b> </h2>
+                    </div>
+                  </div>
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'chopro.jpg' %} alt="" width="200"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Chocolate</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'vanilapro.jpg' %} alt="" width="250"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Vanila</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'mangoproo.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Mango</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'butterscotchpro.jpg' %} alt="" width="200"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Butterscotch</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                 <!-- Team item-->
+                 <div class="col-xl-3 col-sm-6 mb-5">
+                    <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'strawberrypro.jpg' %} alt="" width="185"
+                      class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                      <h5 class="mb-0"><b>Strawberry</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                        <div class="pt-2" >
+
+                        
+                        </div>
+                        
+                      </div>
+                </div>
+                <!-- End-->
+                <div class="team">
+                  <div class="text-center row mb-2 pt-5">
+                    <!-- <h2 class="display-4 font-weight-light" > <u> Technical Team </u> </h2> -->
+                    <h2 class="team-text display-5 text-center font-weight-light" style="font-weight: 700;"> <b>Kulfis  </b> </h2>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-5">
+                  <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'mangokulpro.jpeg' %} alt="" width="185"
+                    class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                    <h5 class="mb-0"><b>Mango</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                      <div class="pt-2" >
+
+                      
+                      </div>
+                      
+                    </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 mb-5">
+                <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'pista.jpg' %} alt="" width="215"
+                  class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                  <h5 class="mb-0"><b>Pista</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                    <div class="pt-2" >
+
+                    
+                    </div>
+                    
+                  </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'mavapro.jpg' %} alt="" width="165"
+                class="img-fluid  mb-5 img-thumbnail shadow-sm">
+                <h5 class="mb-0"><b>Mava</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                  <div class="pt-2" >
+
+                  
+                  </div>
+                  
+                </div>
+          </div>
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'gulkandkulfi.jpg' %} alt="" width="185"
+              class="img-fluid  mb-5 img-thumbnail shadow-sm">
+              <h5 class="mb-0"><b>Gulkand</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+                <div class="pt-2" >
+
+                
+                </div>
+                
+              </div>
+        </div>
+        <div class="team">
+          <div class="text-center row mb-2 pt-5">
+            <!-- <h2 class="display-4 font-weight-light" > <u> Technical Team </u> </h2> -->
+            <h2 class="team-text display-5 text-center font-weight-light" style="font-weight: 700;"> <b>Want More  </b> </h2>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'faloodapro.webp' %} alt="" width="155"
+            class="img-fluid  mb-5 img-thumbnail shadow-sm">
+            <h5 class="mb-0"><b>Faluda</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+              <div class="pt-2" >
+
+              
+              </div>
+              
+            </div>
+      </div>
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'badam.jpg' %} alt="" width="400"
+          class="img-fluid  mb-5 img-thumbnail shadow-sm">
+          <h5 class="mb-0"><b>Badam Shake</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+            <div class="pt-2" >
+
+            
+            </div>
+            
+          </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-5">
+      <div class="bg-white rounded shadow-lg py-5 px-4"><img src={% static 'milkshake.jpg' %} alt="" width="185"
+        class="img-fluid  mb-5 img-thumbnail shadow-sm">
+        <h5 class="mb-0"><b>Milkshakes</b></h5><span class="small text-uppercase text-muted"><b></b></span><br>
+
+          <div class="pt-2" >
+
+          
+          </div>
+          
+        </div>
+ 
+</div>
+              </div>  
+          </div>
+      </div>
+  </div>
+  <div class="text-center pb-5 ">
+    {% comment %} <button type="button" class="btn btn-lg btn-danger" >Order Here !</button> {% endcomment %}
+</div>
+<hr style="padding: 0px 0px; margin: 0px 0px; ">
+
+
+<div class=" m2 text-center "  style="background-image: linear-gradient(50deg,  rgba(10, 13, 24, 0.795), rgba(4, 9, 30, 0.404)), url('bhel.png');">
+   
+    <p class="m22" style="color: white; padding-top: 15vh; font-size: 5vw; text-align: center;" >Over more than 100 Items for you to try
+    </p>
+    
+  </div>
+
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <img src={% static 'Shiv kailas bhel (2).jpg' %} class="logo"  width="100px" style="text-align: center; justify-self: center; align-items: center; padding-top: 0%; border-radius: 15px;">
+      <p class="college-name">
+      <h4><a style="text-decoration: none; color: white; " href="">Shiv Kailas Bhel Pani Puri</a></h4>
+      </p>
+      <p href="college"><a style="text-decoration: none; color: rgb(218, 218, 218);" href=""><i class="fas fa-map-marker-alt"></i>  Senapati Bapat Rd, Gokhalenagar, Pune, Maharashtra  </a></p>
+    </div>
+    <div class="col">
+      <h3 ">Get In Touch <div class="underline"><span></span></div>
+      </h3>
+      <p class="email-id"><a style="text-decoration: none; color: white;" href=""><i class="far fa fa-phone"></i> Call : 9175470884</a></p>
+     
+    </div>
+    <div class="col">
+      <h3>Links<div class="underline"><span></span></div>
+      </h3>
+      <ul style="padding: 0%;">
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/about"><i class="fa fa-question-circle"></i> About Us</a></li>
+       
+        <li><a href="/contact"><i class="fas fa-mobile-alt"></i> Contacts</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Social Media<div class="underline"><span></span></div>
+      </h3>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+       
+      </div>
+    </div>
+  </div>
+  <hr>
+  <p style="text-align: center;" class="copyright">© Shiv Kailas Bhel Pani Puri 2022 </p>
+</footer>
+
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    -->
+   
+  </body>
+</html>
